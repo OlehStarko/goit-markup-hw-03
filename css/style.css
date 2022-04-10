@@ -85,6 +85,8 @@ body {
 
 .header-list {
   padding: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .header-link {
@@ -105,6 +107,8 @@ body {
 
 .header-contact-list {
   padding: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .header-contact-link {
@@ -281,7 +285,8 @@ body {
 }
 
 .portfolio-nav-bar {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .portfolio-list-nav {
@@ -289,8 +294,8 @@ body {
   margin-top: 0;
   margin-bottom: 50px;
   display: inline-block;
-  width: 611px;
   text-align: center;
+  display: flex;
 }
 
 .portfolio-list {
@@ -315,6 +320,7 @@ body {
 }
 
 .portfolio-btn {
+  margin-right: 8px;
   padding: 6px 22px 6px 22px;
   border-radius: 4px;
   font-weight: 500;
@@ -325,6 +331,10 @@ body {
   color: var(--portfolio-btn-text-color);
   background-color: var(--portfolio-btn-bg-color);
   cursor: pointer;
+}
+
+.last-btn {
+  margin-right: 0;
 }
 
 .portfolio-btn:hover,

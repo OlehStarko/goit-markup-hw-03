@@ -337,8 +337,6 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
 }
 
 .portfolio-list-item:not(:nth-child(3n)) {

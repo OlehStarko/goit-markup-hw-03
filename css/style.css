@@ -14,7 +14,6 @@
   --hero-btn-bg-color: #2196f3;
   --hero-btn-active-color: #188ce8;
   --hero-main-text-color: #ffffff;
-  --dignity-main-text-color: #212121;
   --dignity-article-text-color: #212121;
   --dignity-description-text-color: #757575;
   --occupation-main-text-color: #212121;
@@ -29,7 +28,6 @@
   --portfolio-btn-bg-active-color: #2196f3;
   --portfolio-work-name-color: #212121;
   --portfolio-description-color: #757575;
-  --portfolio-description-text-color: #2121212;
   --footer-bg-color: #2f303a;
   --footer-contact-color: #ffffff;
   --footer-logo-span-color: #ffffff;
@@ -49,6 +47,29 @@ body {
   letter-spacing: 0.03em;
 }
 
+ul,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
 .link {
   text-decoration: none;
 }
@@ -61,16 +82,26 @@ body {
   color: var(--active-color);
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .header {
   border-bottom: 1px solid #ececec;
+}
+
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 1200px;
   height: 80px;
 }
 
@@ -96,8 +127,8 @@ body {
 .header-list {
   display: flex;
   align-items: center;
+  margin-left: 93px;
   padding: 0px;
-  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -106,6 +137,8 @@ body {
 }
 
 .header-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: 0.02em;
@@ -123,9 +156,9 @@ body {
 
 .header-contact-list {
   display: flex;
+  margin-left: auto;
   padding: 0px;
   margin-bottom: 0;
-  margin-top: 0;
 }
 .header-contact-list-item + .header-contact-list-item {
   margin-left: 50px;
@@ -152,7 +185,8 @@ body {
   text-align: center;
 }
 .hero-main-text {
-  margin-top: 0;
+  width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -184,16 +218,8 @@ body {
   background: var(--hero-btn-active-color);
 }
 
-.dignity {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .dignity-list {
   display: flex;
-  padding: 0px;
-  width: 1170px;
-  margin: 0 auto;
 }
 
 .dignity-list-item {
@@ -204,18 +230,20 @@ body {
   margin-right: 30px;
 }
 
-.dignity-main-text {
-  margin-top: 0;
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  color: var(--dignity-main-text-color);
-  text-align: center;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .dignity-article-text {
-  margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
@@ -227,17 +255,15 @@ body {
 .dignity-description-text {
   line-height: 24px;
   color: var(--dignity-description-text-color);
-  margin-top: 0;
   margin-bottom: 0;
 }
 
 .occupation {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 
 .occupation-main-text {
   text-align: center;
-  margin-top: 0;
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -247,14 +273,6 @@ body {
 
 .occupation-list {
   display: flex;
-  justify-content: center;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.occupation-list-img {
-  display: block;
 }
 
 .occupation-list-item:not(:last-child) {
@@ -263,13 +281,10 @@ body {
 
 .team {
   background: var(--team-bg-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team-main-text {
   text-align: center;
-  margin-top: 0;
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -280,7 +295,6 @@ body {
 .team-list {
   display: flex;
   justify-content: center;
-  padding: 0px;
 }
 
 .team-item {
@@ -290,7 +304,7 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .team-item:not(:last-child) {
@@ -307,65 +321,44 @@ body {
 }
 
 .team-position-text {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.14;
   color: var(--team-position-text-color);
 }
 
-.portfolio-description-text {
-  margin-top: 94px;
+.portfolio-list-nav {
   margin-bottom: 50px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  color: var(--portfolio-description-text-color);
-}
-
-.portfolio-nav-bar {
   display: flex;
   justify-content: center;
-}
-
-.portfolio-list-nav {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 50px;
-  display: inline-block;
   text-align: center;
-  display: flex;
 }
 
 .portfolio-list {
   display: flex;
-  justify-content: center;
-  margin-top: 0;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
   padding: 0;
+  list-style: none;
 }
 
-.portfolio-list-item:nth-child(n + 2) {
-  margin-left: 30px;
+.portfolio-list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
 }
 
-.portfolio-list:last-child {
-  margin-bottom: 94px;
+.portfolio-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
 }
 
 .portfolio-list-item {
-  padding: 0px;
-  width: 370px;
-  height: 404px;
+  background-color: #fff;
 }
 
-.portfolio-occupation-list-img {
-  display: block;
-}
 .portfolio-list-item-description {
-  padding-top: 20px;
-  border: 1px solid #eeeeee;
+  padding: 24px;
+
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #eeeeee;
   border-top: 0;
 }
 
@@ -394,19 +387,15 @@ body {
 }
 
 h2.portfolio-work-name {
-  margin-top: 0;
   margin-bottom: 4px;
-  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--portfolio-work-name-color);
 }
+
 p.portfolio-description {
-  margin-left: 24px;
-  margin-top: 0;
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.87;
   color: var(--portfolio-description-color);
@@ -418,22 +407,15 @@ p.portfolio-description {
   padding-bottom: 60px;
 }
 
-.footer-container {
-  margin: 0 auto;
-  width: 1200px;
-}
-
 .footer-logo-span {
   color: var(--footer-logo-span-color);
 }
 
-.footer-list {
-  padding: 0px;
+.adress-box {
   margin-top: 20px;
-  margin-bottom: 0;
 }
+
 .footer-list-mail {
-  margin-top: 0;
   margin-bottom: 9px;
 }
 .footer-list-item {
@@ -441,7 +423,6 @@ p.portfolio-description {
 }
 
 p.footer-contact {
-  margin-top: 0;
   margin-bottom: 0;
   font-style: normal;
   line-height: 1.71;

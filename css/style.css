@@ -328,10 +328,18 @@ img {
 }
 
 .portfolio-list-nav {
-  margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
   text-align: center;
+}
+
+.portfolio-list-nav-item {
+  margin-right: 8px;
+}
+
+.portfolio-list-nav-item:last-child {
+  margin-right: 0;
 }
 
 .portfolio-list {
@@ -361,7 +369,6 @@ img {
 }
 
 .portfolio-btn {
-  margin-right: 8px;
   padding: 6px 22px 6px 22px;
   border-radius: 4px;
   font-weight: 500;
@@ -372,10 +379,6 @@ img {
   color: var(--portfolio-btn-text-color);
   background-color: var(--portfolio-btn-bg-color);
   cursor: pointer;
-}
-
-.last-btn {
-  margin-right: 0;
 }
 
 .portfolio-btn:hover,
